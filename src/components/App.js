@@ -62,7 +62,7 @@ const App = () => {
   }
 
   const compareAge = (a, b) => {
-    return a.born - b.born
+    return b.born - a.born
   }
 
   const sortedPlaneteers = filteredPlaneteers.slice().sort(compareAge)
