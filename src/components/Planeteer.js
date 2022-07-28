@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const currentDate = new Date().getFullYear()
+
 const Planeteer = ({ name, fromUSA, born, bio, quote, pictureUrl, twitter }) => {
   const [displayBio, setDisplayBio] = useState(true)
   
@@ -18,6 +20,7 @@ const Planeteer = ({ name, fromUSA, born, bio, quote, pictureUrl, twitter }) => 
         />
         <div className="card__content">
           <div className="card__title">{name}</div>
+          <div className="card__title">{`Age: ${currentDate - born}`}</div>
           <p className="card__text">
             {
               displayBio

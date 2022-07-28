@@ -1,5 +1,5 @@
 {
-  "planeteers":[
+  "planeteers": [
     {
       "id": 1,
       "name": "Xiuhtezcatl Martinez",
@@ -71,7 +71,7 @@
       "twitter": " "
     },
     {
-      "id":8,
+      "id": 8,
       "name": "Alexandria Villaseñor",
       "fromUSA": true,
       "born": 2005,
@@ -79,6 +79,16 @@
       "quote": "Two years ago I began to research the connection between climate change and wildfires and learned that wildfires are burning longer and hotter because of climate change. I also saw Greta’s COP24 speech, and I thought that world leaders would take action to reduce greenhouse gas emissions. When they didn't, I was upset, and it was on the last day of COP24, December 14, that I began my strike at the U.N.",
       "pictureUrl": "https://www.abc.net.au/news/image/11556402-3x2-940x627.jpg",
       "twitter": "@AlexandriaV2005"
+    },
+    {
+      "name": "Howey Ou",
+      "fromUSA": false,
+      "born": 2003,
+      "bio": "Sixteen-year old Howey Ou is part of a small but growing minority of young Chinese determined to press their country towards more radical carbon-cutting action. Together with her friend, they are also China’s sole winners of carbon neutral “green tickets” the UN is providing to 100 young people around the world. She conducted a public climate strike in front of government offices in Guilin in southern China for several days in late May – Greta Thunberg called her a “true hero” – before the authorities said she had to stop because she did not have a permit.The 16-year-old, who spends her spare time planting trees around her hometown, was nominated to travel to this week’s United Nations climate summit in New York by the youth activist group Earth Uprising. ",
+      "quote": "I found something I could do for society.",
+      "pictureUrl": "https://i.guim.co.uk/img/media/013fcfb2fe5755aabbca1bde23ee0ac6c0e32048/71_0_1260_756/master/1260.jpg?width=1300&quality=45&auto=format&fit=max&dpr=2&s=86c8c4ef954d8790909379da1bf90baa",
+      "twitter": "@howey_ou",
+      "id": 9
     }
   ]
 }

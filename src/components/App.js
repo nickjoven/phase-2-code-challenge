@@ -18,9 +18,22 @@ import SearchBar from "./SearchBar";
 // 3. Type in the SearchBar component and see the list of planeteers whose name or bio match the text 
 // in the search bar.If there's no text in the search bar, all the planeteers should be rendered.
 
+// Bonus 
+// - See the age of the planeteer in the`Planeteer` component(To calculate the
+//   age, first figure out how to get the current year in JavaScript and then
+//   subtract the planeteer's birth year from it.)
+// - Click the`RandomButton` to render a random planeteer to the list of
+//   planeteers on the page.Additionally, the new random planeteer should be
+//   persisted to the database.
+// - Click on a checkbox in the`SearchBar` component that, when checked, sorts the
+//   planeteers in the`PlaneteersContainer` from youngest to oldest.When
+//   unchecked, the planeteers should be sorted by ID.When viewing a filtered list
+//   of planeteers, the sort should only sort the filtered list.
+
 const App = () => {
   const [planeteers, setPlaneteers] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
+  const [isSortByAge, setIsSortByAge] = useState(false)
 
   useEffect(() => {
     const fetchPlaneteers = async () => {
@@ -38,12 +51,37 @@ const App = () => {
     )
   })
 
+  const handleAddPlaneteer = (newPlaneteer) => {
+    const updatedPlaneteers = [...planeteers, newPlaneteer]
+    setPlaneteers(updatedPlaneteers)
+  }
+
+  const handleToggleSort = () => {
+    setIsSortByAge(isSortByAge => !isSortByAge)
+  }
+
+  const compareAge = (a, b) => {
+    return a.born - b.born
+  }
+
+  const sortedPlaneteers = filteredPlaneteers.slice().sort(compareAge)
+
   return (
     <div>
       <Header />
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <RandomButton />
-      <PlaneteersContainer planeteers={filteredPlaneteers} />
+      <SearchBar 
+        searchTerm={searchTerm} 
+        setSearchTerm={setSearchTerm} 
+        handleToggleSort={handleToggleSort}
+      />
+      <RandomButton handleAddPlaneteer={handleAddPlaneteer} />
+      <PlaneteersContainer 
+        planeteers={
+          isSortByAge
+          ? sortedPlaneteers
+          : filteredPlaneteers
+        } 
+      />
     </div>
   );
 }
