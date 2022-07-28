@@ -4,6 +4,7 @@ import Header from "./Header";
 import RandomButton from "./RandomButton";
 import PlaneteersContainer from "./PlaneteersContainer";
 import SearchBar from "./SearchBar";
+// import Signup from './Signup'
 
 // 1. See list of planeteers on the page, using the Planeteer component.The Planeteer component should 
 // display the planeteer's image, name, bio, Twitter handle, and conditionally render where they are 
@@ -75,6 +76,7 @@ const App = () => {
         handleToggleSort={handleToggleSort}
       />
       <RandomButton handleAddPlaneteer={handleAddPlaneteer} />
+      {/* <Signup /> */}
       <PlaneteersContainer 
         planeteers={
           isSortByAge
